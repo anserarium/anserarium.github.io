@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="referrer" content="no-referrer">
+<title>Anserarium</title>
+<meta name="description" content="A cabinet of curiosities.">
+<meta name="theme-color" content="#2E211A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Anserarium">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════════ THE PLATE (opening curtain) ══════════════ -->
+<div id="plate" class="plate" hidden>
+  <div class="plate-card">
+    <div class="plate-rule"></div>
+    <p class="plate-ex">Ex Libris</p>
+    <h1 class="plate-name">Goose</h1>
+    <p class="plate-sub">Her cabinet of curiosities,<br>her register of small good days.</p>
+    <div class="plate-seal" id="plate-seal"></div>
+    <button class="btn-primary" id="plate-enter">Open the Cabinet</button>
+    <div class="plate-rule"></div>
+  </div>
+</div>
+
+<!-- ══════════════ HEADER ══════════════ -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark" id="brand-mark"></span>
+      <span class="brand-text">
+        <b>Anserarium</b>
+        <i id="topbar-sub">a cabinet kept for Goose</i>
+      </span>
+    </div>
+    <div class="streak-chip" id="streak-chip" title="Days observed in sequence">
+      <span class="streak-num" id="streak-num">0</span>
+      <span class="streak-lbl">days</span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ VIEWS ══════════════ -->
+<main id="main">
+  <section class="view" id="view-register" data-view="register"></section>
+  <section class="view" id="view-cabinet"  data-view="cabinet" hidden></section>
+  <section class="view" id="view-vitrine"  data-view="vitrine" hidden></section>
+  <section class="view" id="view-ledger"   data-view="ledger" hidden></section>
+  <section class="view" id="view-colophon" data-view="colophon" hidden></section>
+</main>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav class="tabs" id="tabs">
+  <button data-go="register" class="tab is-on"><span class="tab-i" data-i="register"></span><span>Register</span></button>
+  <button data-go="cabinet"  class="tab"><span class="tab-i" data-i="cabinet"></span><span>Cabinet</span></button>
+  <button data-go="vitrine"  class="tab"><span class="tab-i" data-i="vitrine"></span><span>Vitrine</span></button>
+  <button data-go="ledger"   class="tab"><span class="tab-i" data-i="ledger"></span><span>Ledger</span></button>
+  <button data-go="colophon" class="tab"><span class="tab-i" data-i="colophon"></span><span>Colophon</span></button>
+</nav>
+
+<!-- ══════════════ SPECIMEN MODAL ══════════════ -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-scrim" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true">
+    <button class="modal-x" data-close aria-label="Close">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ══════════════ AWARD CEREMONY ══════════════ -->
+<div class="ceremony" id="ceremony" hidden>
+  <div class="cer-scrim"></div>
+  <div class="cer-stage">
+    <div class="cer-beam"></div>
+    <p class="cer-kicker" id="cer-kicker">A new specimen</p>
+    <div class="cer-art" id="cer-art"></div>
+    <div class="cer-pin"></div>
+    <h2 class="cer-name" id="cer-name"></h2>
+    <p class="cer-latin" id="cer-latin"></p>
+    <div class="cer-rule"></div>
+    <p class="cer-fact" id="cer-fact"></p>
+    <p class="cer-tail" id="cer-tail"></p>
+    <p class="cer-spec" id="cer-spec"></p>
+    <button class="btn-primary" id="cer-next">Pin it to the board</button>
+    <p class="cer-more" id="cer-more" hidden></p>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="js/sound.js"></script>
+<script src="js/art.js"></script>
+<script src="js/data/flora.js"></script>
+<script src="js/data/lepidoptera.js"></script>
+<script src="js/data/fauna.js"></script>
+<script src="js/data/mineralia.js"></script>
+<script src="js/data/curiosities.js"></script>
+<script src="js/data/achievements.js"></script>
+<script src="js/data/fieldnotes.js"></script>
+<script src="js/state.js"></script>
+<script src="js/rewards.js"></script>
+<script src="js/views.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
